@@ -1,8 +1,8 @@
 const Header = () => {
     return (
-        <header className="w-full">
+        <header className="w-full relative">
             <nav
-                class="relative flex w-full items-center justify-between py-2"
+                class="absolute flex w-full items-center justify-between py-2"
                 data-te-navbar-ref>
                 <div class="flex w-full flex-wrap items-center justify-between">
                     <div class="flex items-center">
@@ -23,7 +23,8 @@ const Header = () => {
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke-width="1.5"
-                                    stroke="black"
+                                    stroke="currentColor"
+                                    class="h-6 w-6"
                                 >
                                     <path
                                         stroke-linecap="round"
@@ -40,15 +41,15 @@ const Header = () => {
 
                     <div
                         class="
-                            !visible hidden grow basis-[100%] md:grow-0 md:basis-0 items-center 
-                            md:!flex bg-color-lighter md:bg-transparent p-2 mt-2 md:p-0 
-                            rounded-md shadow-md md:shadow-none text-white md:text-black 
-                            font-bold lg:text-lg
+                            !visible hidden grow basis-[100%] items-center md:grow-0 md:basis-0
+                            md:!flex bg-color-lighter md:bg-transparent mt-2 
+                            rounded-md shadow-md md:shadow-none text-white md:text-color-medium
+                            font-bold lg:text-lg lg:!flex lg:basis-auto hover-underline-animation
                         "
                         id="navbarSupportedContentY"
                         data-te-collapse-item>
                         <ul
-                            class="flex flex-col md:flex-row md:w-full gap-2 md:gap-16 md:items-center"
+                            class="flex flex-col md:flex-row md:w-full ml-6 py-2 md:ml-0 gap-2 md:gap-14 md:items-center"
                             data-te-navbar-nav-ref>
                             <li data-te-nav-item-ref className="flex gap-1 items-center">
                                 <a href="#!" data-te-nav-link-ref>

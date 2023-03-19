@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'color-calculator-bg': '#e3e2f7',
         'color-lighter': '#c7cded',
         'color-light': '#acbcf6',
         'color-medium': '#6276e3',
