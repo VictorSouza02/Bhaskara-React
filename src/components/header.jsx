@@ -8,9 +8,8 @@ const Header = () => {
                     <div class="flex items-center">
                         <button
                             class="
-                                mr-2 border-0 bg-transparent py-2 text-xl leading-none transition-shadow 
-                                duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 
-                                md:hidden
+                                border-0 bg-transparent py-2 text-xl leading-none transition-shadow 
+                                ease-in-out md:hidden ml-[20px]
                             "
                             type="button"
                             data-te-collapse-init
@@ -35,8 +34,8 @@ const Header = () => {
                         </button>
                     </div>
 
-                    <div className="justify-self-start md:order-[-1]">
-                        <div className="bg-black w-[64px] aspect-square"></div>
+                    <div className="justify-self-start md:order-[-1] overflow-hidden w-[64px] aspect-square">
+                        <img src="./media/calculator.gif" alt="Calculator" />
                     </div>
 
                     <div
