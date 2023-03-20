@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Header = () => {
     return (
         <header className="w-full relative">
@@ -16,7 +18,8 @@ const Header = () => {
                             data-te-target="#navbarSupportedContentY"
                             aria-controls="navbarSupportedContentY"
                             aria-expanded="false"
-                            aria-label="Toggle navigation">
+                            aria-label="Toggle navigation"
+                        >
                             <span class="[&>svg]:w-5">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -52,9 +55,9 @@ const Header = () => {
                             class="flex flex-col md:flex-row md:w-full ml-6 py-2 md:ml-0 gap-2 md:gap-14 md:items-center"
                             data-te-navbar-nav-ref>
                             <li data-te-nav-item-ref className="flex gap-1 items-center">
-                                <a href="#!" data-te-nav-link-ref>
+                                <Link to='/landing' data-te-nav-link-ref>
                                     Home
-                                </a>
+                                </Link>
 
                                 <div className="md:hidden">
                                     <svg
