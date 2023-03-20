@@ -6,9 +6,11 @@
 
 html {
     font-family: 'Poppins', sans-serif;
+    background-color: var(--white);
 }
 
 :root {
+    --white: #e8f1f2;
     --scroll-color: #3c51c6;
 }
 

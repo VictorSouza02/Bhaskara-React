@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Header = () => {
     return (
-        <header className="w-full relative">
+        <header className="w-[70%] max-w-[900px] mx-auto relative">
             <nav
                 class="absolute flex w-full items-center justify-between py-2"
                 data-te-navbar-ref>
@@ -38,7 +38,7 @@ const Header = () => {
                         </button>
                     </div>
 
-                    <div className="justify-self-start md:order-[-1] overflow-hidden w-[64px] aspect-square">
+                    <div className="justify-self-start md:order-[-1] overflow-hidden w-[64px] aspect-square rounded-full">
                         <img src="./media/calculator.gif" alt="Calculator" />
                     </div>
 
@@ -81,9 +81,9 @@ const Header = () => {
                                 </div>
                             </li>
                             <li data-te-nav-item-ref className="flex gap-1 items-center">
-                                <a href="#!" data-te-nav-link-ref>
+                                <Link to='/calculadora' data-te-nav-link-ref>
                                     Calculadora
-                                </a>
+                                </Link>
 
                                 <div className="md:hidden">
                                     <svg

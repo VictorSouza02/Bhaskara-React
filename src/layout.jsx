@@ -3,7 +3,7 @@ import Header from './components/header';
 
 const Layout = () => {
     return (
-        <div className="w-[70%] max-w-[900px] mx-auto">
+        <div className="w-full mx-auto">
             <Header />
 
             <main className="w-full flex flex-col items-center gap-8">

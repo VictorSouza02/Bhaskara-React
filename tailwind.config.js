@@ -12,6 +12,7 @@ module.exports = {
         'color-light': '#acbcf6',
         'color-medium': '#6276e3',
         'color-dark': '#3c51c6',
+        'color-white': '#e8f1f2',
       }
     },
   },
