@@ -45,7 +45,7 @@ const Header = () => {
                     <div
                         class="
                             !visible hidden grow basis-[100%] items-center md:grow-0 md:basis-0
-                            md:!flex bg-color-lighter md:bg-transparent mt-2 
+                            md:!flex bg-color-light md:bg-transparent mt-2 
                             rounded-md shadow-md md:shadow-none text-white md:text-color-medium
                             font-bold lg:text-lg lg:!flex lg:basis-auto hover-underline-animation
                         "

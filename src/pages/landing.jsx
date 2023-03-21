@@ -29,7 +29,7 @@ const Landing = () => {
                             to='/calculadora'
                             className="
                                     px-2 py-1 bg-color-dark text-color-white rounded-lg 
-                                    hover:bg-color-lighter hover:text-color-dark duration-500
+                                    hover:bg-white hover:text-color-dark duration-500
                                 "
                         >
                             Calcular agora!
@@ -87,7 +87,7 @@ const Landing = () => {
                                 <Link
                                     to='/calculadora'
                                     className="
-                                    px-2 py-1 bg-color-white text-color-dark rounded-lg
+                                    px-2 py-1 bg-white text-color-dark rounded-lg
                                     hover:bg-color-medium hover:text-color-white duration-500
                                 "
                                 >
@@ -97,7 +97,7 @@ const Landing = () => {
                                 <Link
                                     to='/calculadora'
                                     className="
-                                    px-2 py-1 bg-color-white text-color-dark rounded-lg
+                                    px-2 py-1 bg-white text-color-dark rounded-lg
                                     hover:bg-color-medium hover:text-color-white duration-500
                                 "
                                 >
