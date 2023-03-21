@@ -29,8 +29,7 @@ const Landing = () => {
                             to='/calculadora'
                             className="
                                     px-2 py-1 bg-color-dark text-color-white rounded-lg 
-                                    hover:border hover:border-color-dark hover:bg-color-lighter 
-                                    hover:text-color-dark duration-500
+                                    hover:bg-color-lighter hover:text-color-dark duration-500
                                 "
                         >
                             Calcular agora!
@@ -54,7 +53,7 @@ const Landing = () => {
                             md:justify-between gap-8
                         "
                     >
-                        <div className="flex flex-col items-center justify-center">
+                        <div className="flex flex-col items-center justify-center gap-2">
                             <div className="w-full max-w-[300px] md:max-w-[550px]">
                                 <img src="./media/study.png" alt="Itens relacionados ao estudo" />
                             </div>
@@ -83,10 +82,32 @@ const Landing = () => {
                                     Ouch!
                                 </a>
                             </div>
+
+                            <div className="gap-x-4 text-center hidden md:flex">
+                                <Link
+                                    to='/calculadora'
+                                    className="
+                                    px-2 py-1 bg-color-white text-color-dark rounded-lg
+                                    hover:bg-color-medium hover:text-color-white duration-500
+                                "
+                                >
+                                    Ler mais
+                                </Link>
+
+                                <Link
+                                    to='/calculadora'
+                                    className="
+                                    px-2 py-1 bg-color-white text-color-dark rounded-lg
+                                    hover:bg-color-medium hover:text-color-white duration-500
+                                "
+                                >
+                                    Calcular agora!
+                                </Link>
+                            </div>
                         </div>
 
                         <div className="flex flex-col items-center md:order-[-1] gap-4">
-                            <div className="w-[300px] flex flex-col gap-5">
+                            <div className="w-[250px] lg:w-[350px] flex flex-col gap-5">
                                 <h1 className="text-2xl md:text-3xl font-bold text-center">
                                     Mas afinal, oque seria uma equação do 2º grau?
                                 </h1>
@@ -107,6 +128,28 @@ const Landing = () => {
                                     Esses valores são chamados de raízes da equação.
                                 </p>
                             </div>
+                        </div>
+
+                        <div className="flex gap-x-4 text-center md:hidden">
+                            <Link
+                                to='/calculadora'
+                                className="
+                                    px-2 py-1 bg-color-white text-color-dark rounded-lg
+                                    hover:bg-color-medium hover:text-color-white duration-500
+                                "
+                            >
+                                Ler mais
+                            </Link>
+
+                            <Link
+                                to='/calculadora'
+                                className="
+                                    px-2 py-1 bg-color-white text-color-dark rounded-lg
+                                    hover:bg-color-medium hover:text-color-white duration-500
+                                "
+                            >
+                                Calcular agora!
+                            </Link>
                         </div>
                     </div>
                 </div>
