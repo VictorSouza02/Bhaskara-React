@@ -12,7 +12,12 @@ const Landing = () => {
                         "
                 >
                     <div className="w-full max-w-[300px] md:max-w-[550px]">
-                        <img src="./media/landingTeacher.png" alt="Professor Teaching" />
+                        <img
+                            src="./media/landingTeacher.png"
+                            alt="Professor Teaching"
+                            data-te-toggle="tooltip"
+                            title="Por LuciYamaji"
+                        />
                     </div>
 
                     <div className="flex flex-col items-center md:order-[-1] gap-4">
@@ -55,37 +60,17 @@ const Landing = () => {
                     >
                         <div className="flex flex-col items-center justify-center gap-2">
                             <div className="w-full max-w-[300px] md:max-w-[550px]">
-                                <img src="./media/study.png" alt="Itens relacionados ao estudo" />
-                            </div>
-
-
-                            <div className="flex gap-2 text-xs flex-wrap justify-center text-color-light">
-                                <span>
-                                    Ilustração por:
-                                </span>
-
-                                <a
-                                    className="underline"
-                                    target="_blank"
-                                    href="https://icons8.com/illustrations/author/RogqKjMRAQ79"
-                                >
-                                    xopolin
-                                </a>
-
-                                <span>em:</span>
-
-                                <a
-                                    className="underline"
-                                    target="_blank"
-                                    href="https://icons8.com/illustrations"
-                                >
-                                    Ouch!
-                                </a>
+                                <img
+                                    src="./media/study.png"
+                                    alt="Itens relacionados ao estudo"
+                                    data-te-toggle="tooltip"
+                                    title="Por Xopolin"
+                                />
                             </div>
 
                             <div className="gap-x-4 text-center hidden md:flex">
                                 <Link
-                                    to='/calculadora'
+                                    to='/bhaskara'
                                     className="
                                     px-2 py-1 bg-white text-color-dark rounded-lg
                                     hover:bg-color-medium hover:text-color-white duration-500
@@ -132,7 +117,7 @@ const Landing = () => {
 
                         <div className="flex gap-x-4 text-center md:hidden">
                             <Link
-                                to='/calculadora'
+                                to='/bhaskara'
                                 className="
                                     px-2 py-1 bg-color-white text-color-dark rounded-lg
                                     hover:bg-color-medium hover:text-color-white duration-500

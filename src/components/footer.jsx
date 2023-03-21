@@ -80,7 +80,16 @@ const Footer = () => {
                                     target="_blank"
                                     className="text-white hover:underline"
                                 >
-                                    Icons 8
+                                    Icons8
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://iconscout.com/"
+                                    target="_blank"
+                                    className="text-white hover:underline"
+                                >
+                                    IconScout
                                 </a>
                             </li>
                             <li>
