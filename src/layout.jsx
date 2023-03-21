@@ -1,15 +1,18 @@
 import { Outlet } from 'react-router-dom';
 import Header from './components/header';
+import Footer from './components/footer';
 
 const Layout = () => {
     return (
-        <div className="w-full mx-auto">
+        <>
             <Header />
 
             <main className="w-full flex flex-col items-center gap-8">
                 <Outlet />
             </main>
-        </div>
+
+            <Footer/>
+        </>
     )
 }
 

@@ -44,7 +44,7 @@ const Landing = () => {
             <section
                 className="
                     w-full min-h-[100vh] flex flex-col items-center justify-center 
-                    bg-color-dark text-color-white
+                    bg-color-dark text-color-white p-8
                 "
             >
                 <div className="w-[70%] max-w-[900px] mx-auto">
@@ -54,13 +54,11 @@ const Landing = () => {
                             md:justify-between gap-8
                         "
                     >
-                        <div
-                            className="
-                                w-full max-w-[300px] md:max-w-[550px] flex flex-col 
-                                items-center justify-center
-                            "
-                        >
-                            <img src="./media/study.png" alt="Itens relacionados ao estudo" />
+                        <div className="flex flex-col items-center justify-center">
+                            <div className="w-full max-w-[300px] md:max-w-[550px]">
+                                <img src="./media/study.png" alt="Itens relacionados ao estudo" />
+                            </div>
+
 
                             <div className="flex gap-2 text-xs flex-wrap justify-center text-color-light">
                                 <span>
@@ -69,6 +67,7 @@ const Landing = () => {
 
                                 <a
                                     className="underline"
+                                    target="_blank"
                                     href="https://icons8.com/illustrations/author/RogqKjMRAQ79"
                                 >
                                     xopolin
@@ -78,6 +77,7 @@ const Landing = () => {
 
                                 <a
                                     className="underline"
+                                    target="_blank"
                                     href="https://icons8.com/illustrations"
                                 >
                                     Ouch!
@@ -86,7 +86,7 @@ const Landing = () => {
                         </div>
 
                         <div className="flex flex-col items-center md:order-[-1] gap-4">
-                            <div className="w-full flex flex-col gap-5">
+                            <div className="w-[300px] flex flex-col gap-5">
                                 <h1 className="text-2xl md:text-3xl font-bold text-center">
                                     Mas afinal, oque seria uma equação do 2º grau?
                                 </h1>
@@ -107,8 +107,6 @@ const Landing = () => {
                                     Esses valores são chamados de raízes da equação.
                                 </p>
                             </div>
-
-                            <div className="scroll"></div>
                         </div>
                     </div>
                 </div>
