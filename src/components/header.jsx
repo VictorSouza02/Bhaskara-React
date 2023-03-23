@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Header = () => {
     return (
-        <header className="w-[70%] max-w-[900px] mx-auto relative">
+        <header className="w-[90%] md:w-[70%] max-w-[900px] mx-auto relative">
             <nav
                 class="absolute flex w-full items-center justify-between py-2"
                 data-te-navbar-ref>

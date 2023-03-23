@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <footer className="bg-neutral-900 text-center text-white">
-            <div className="w-[70%] max-w-[900px] mx-auto p-8">
+            <div className="w-[90%] md:w-[70%] max-w-[900px] mx-auto p-8">
                 <div className="mb-6 flex justify-center gap-4">
                     <a
                         href="https://www.linkedin.com/in/victorsouza02"
@@ -90,6 +90,15 @@ const Footer = () => {
                                     className="text-white hover:underline"
                                 >
                                     IconScout
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://icons8.com/illustrations"
+                                    target="_blank"
+                                    className="text-white hover:underline"
+                                >
+                                    ouch!
                                 </a>
                             </li>
                             <li>

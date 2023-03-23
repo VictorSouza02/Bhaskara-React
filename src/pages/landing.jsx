@@ -11,7 +11,7 @@ const Landing = () => {
                             md:justify-between gap-4 md:gap-8
                         "
                 >
-                    <div className="w-full max-w-[300px] md:max-w-[550px]">
+                    <div className="w-full max-w-[300px] md:max-w-[475px]">
                         <img
                             src="./media/landingTeacher.png"
                             alt="Professor Teaching"
@@ -51,7 +51,7 @@ const Landing = () => {
                     bg-color-dark text-color-white p-8
                 "
             >
-                <div className="w-[70%] max-w-[900px] mx-auto">
+                <div className="w-[90%] md:w-[70%] max-w-[900px] mx-auto">
                     <div
                         className="
                             w-full flex flex-col items-center justify-center md:flex-row 
@@ -59,7 +59,7 @@ const Landing = () => {
                         "
                     >
                         <div className="flex flex-col items-center justify-center gap-2">
-                            <div className="w-full max-w-[300px] md:max-w-[550px]">
+                            <div className="w-full max-w-[300px] md:max-w-[475px]">
                                 <img
                                     src="./media/study.png"
                                     alt="Itens relacionados ao estudo"
