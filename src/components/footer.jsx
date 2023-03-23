@@ -148,7 +148,7 @@ const Footer = () => {
                         <ul className="mb-0 list-none">
                             <li>
                                 <a
-                                    href="https://victorsouza02.github.io/Portfolio/#/"
+                                    href="https://victorsouza02.github.io/Portfolio/#/pt"
                                     target="_blank"
                                     className="text-white hover:underline"
                                 >
@@ -191,7 +191,11 @@ const Footer = () => {
                 className="p-4 text-center bg-[rgba(0, 0, 0, 0.2)]">
                 © 2023 Copyright:
 
-                <a className="text-white mx-1" href="https://tailwind-elements.com/">
+                <a
+                    className="text-white mx-1 hover:underline"
+                    href="https://victorsouza02.github.io/Portfolio/#/pt"
+                    target="_blank"
+                >
                     Souza Víctor
                 </a>
             </div>

@@ -55,7 +55,7 @@ const Header = () => {
                             class="flex flex-col md:flex-row md:w-full ml-6 py-2 md:ml-0 gap-2 md:gap-14 md:items-center"
                             data-te-navbar-nav-ref>
                             <li data-te-nav-item-ref className="flex gap-1 items-center">
-                                <Link to='/landing' data-te-nav-link-ref>
+                                <Link to='/' data-te-nav-link-ref>
                                     Home
                                 </Link>
 
@@ -107,7 +107,7 @@ const Header = () => {
                                 </div>
                             </li>
                             <li data-te-nav-item-ref className="flex gap-1 items-center">
-                                <a href="#!" data-te-nav-link-ref>
+                                <a href="/bhaskara" data-te-nav-link-ref>
                                     Bhaskara
                                 </a>
 
@@ -133,7 +133,7 @@ const Header = () => {
                                 </div>
                             </li>
                             <li data-te-nav-item-ref className="flex gap-1 items-center">
-                                <a href="#!" data-te-nav-link-ref>
+                                <a href="/sobre" data-te-nav-link-ref>
                                     Sobre
                                 </a>
 
