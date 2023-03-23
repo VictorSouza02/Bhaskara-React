@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom"
 import Modal from "../components/modal"
+import { useState } from "react"
 
 const Calculadora = () => {
+
+    const [valorA, setValorA] = useState(NaN)
+    const [valorB, setValorB] = useState(NaN)
+    const [valorC, setValorC] = useState(NaN)
+
     return (
         <section className="w-full min-h-[100vh] flex flex-col items-center justify-center">
             <div
@@ -33,6 +39,8 @@ const Calculadora = () => {
                                 "
                                 id="valorA"
                                 type="number"
+                                value={valorA}
+                                onChange={(e) => setValorA(e.target.value)}
                                 placeholder="Insira o valor de A"
                             />
                         </div>
@@ -48,6 +56,8 @@ const Calculadora = () => {
                                 "
                                 id="valorB"
                                 type="number"
+                                value={valorB}
+                                onChange={(e) => setValorB(e.target.value)}
                                 placeholder="Insira o valor de B"
                             />
                         </div>
@@ -63,6 +73,8 @@ const Calculadora = () => {
                                 "
                                 id="valorC"
                                 type="number"
+                                value={valorC}
+                                onChange={(e) => setValorC(e.target.value)}
                                 placeholder="Insira o valor de C"
                             />
                         </div>
@@ -82,7 +94,23 @@ const Calculadora = () => {
             </div>
 
             <Modal idRef="modalCalculadora">
+                <div className="flex flex-col items-center w-full">
+                    <div className="flex flex-col w-full items-center md:flex-row md:justify-around">
+                        <h1 className="text-xl md:text-2xl text-color-dark font-bold">
+                            x1 =
+                            <span className="ml-1 text-red-500 text-3xl">
+                                {/* {valorX1} */}
+                            </span>
+                        </h1>
 
+                        <h1 className="text-xl md:text-2xl text-color-dark font-bold">
+                            x2 =
+                            <span className="ml-1 text-red-500 text-3xl">
+                                {/* {valorX2} */}
+                            </span>
+                        </h1>
+                    </div>
+                </div>
             </Modal>
         </section>
     )

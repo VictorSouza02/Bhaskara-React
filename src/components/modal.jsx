@@ -19,7 +19,7 @@ function Modal({ children, idRef }) {
             >
                 <div
                     class="
-                    pointer-events-auto relative flex w-[90%] md:w-[70%] max-w-[900px] mx-auto 
+                    pointer-events-auto relative flex w-[85%] md:w-[70%] max-w-[900px] mx-auto 
                     flex-col rounded-md border-none bg-white bg-clip-padding text-current 
                     shadow-lg outline-none py-10 px-4 min-h-[100px]
                     "
