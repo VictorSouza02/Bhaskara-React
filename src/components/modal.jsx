@@ -21,7 +21,7 @@ function Modal({ children, idRef }) {
                     className="
                     pointer-events-auto relative flex w-[85%] md:w-[70%] max-w-[900px] mx-auto 
                     flex-col rounded-md border-none bg-white bg-clip-padding text-current 
-                    shadow-lg outline-none py-10 px-4 min-h-[100px] my-8 max-h-[80vh] md:max-h-min
+                    shadow-lg outline-none py-10 px-4 min-h-[100px] my-8 max-h-[80vh] overflow-y-scroll
                     "
                 >
                     <button

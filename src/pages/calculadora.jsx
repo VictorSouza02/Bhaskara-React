@@ -96,39 +96,34 @@ const Calculadora = () => {
             </div>
 
             <Modal idRef="modalCalculadora">
-                <div className="flex flex-col items-center w-full text-xl md:text-2xl text-color-dark font-bold">
-                    <div className="flex flex-col w-full items-center md:flex-row md:justify-around">
-                        <div className="flex">
-                            <h1>
-                                Δ =
-                            </h1>
-                            <h1 className="ml-1 text-red-500 text-3xl">
-                                {valorDelta}
-                            </h1>
-                        </div>
+                <div
+                    className="
+                        flex flex-col lg:flex-row flex-wrap items-center w-full text-xl 
+                        md:text-2xl text-color-dark font-bold gap-2 md:gap-4
+                    "
+                >
+                    {/* <div
+                        className="
+                            flex flex-col w-full items-center md:flex-row md:justify-around 
+                            gap-2 md:gap-4 pb-2 md:pb-4 border-b-2 border-color-dark
+                        "
+                    >
+                        <h1 className="rounded-md shadow-md text-white bg-orange-500 px-2 py-1">
+                            Δ = {valorDelta}
+                        </h1>
 
-                        <div className="flex">
-                            <h1>
-                                x1 =
-                            </h1>
-                            <h1 className="ml-1 text-red-500 text-3xl">
-                                {((- valorB) + (valorDelta ** 0.5)) / (2 * valorA)}
-                            </h1>
-                        </div>
+                        <h1 className="rounded-md shadow-md text-white bg-orange-500 px-2 py-1">
+                            Δ = {((- valorB) + (valorDelta ** 0.5)) / (2 * valorA)}
+                        </h1>
 
-                        <div className="flex">
-                            <h1>
-                                x2 =
-                            </h1>
-                            <h1 className="ml-1 text-red-500 text-3xl">
-                                {((- valorB) - (valorDelta ** 0.5)) / (2 * valorA)}
-                            </h1>
-                        </div>
-                    </div>
+                        <h1 className="rounded-md shadow-md text-white bg-orange-500 px-2 py-1">
+                            Δ = {((- valorB) - (valorDelta ** 0.5)) / (2 * valorA)}
+                        </h1>
+                    </div> */}
 
-                    <div className="text-color-light flex flex-col w-full items-center">
-                        <h1 className="ml-1 text-red-500 text-sm">
-                            Delta:
+                    <div className="text-color-light flex flex-col items-center pb-2 md:pb-4 border-b-2 border-color-dark">
+                        <h1 className="rounded-md shadow-md text-white bg-color-dark px-2 py-1">
+                            Delta
                         </h1>
 
                         <span>
@@ -148,9 +143,9 @@ const Calculadora = () => {
                         </span>
                     </div>
 
-                    <div className="text-color-light flex flex-col w-full items-center bg-color-pink-500">
-                        <h1 className="ml-1 text-red-500 text-sm">
-                            x1:
+                    <div className="text-color-light flex flex-col items-center pb-2 md:pb-4 border-b-2 border-color-dark">
+                        <h1 className="rounded-md shadow-md mb-1 text-white bg-color-dark px-2 py-1">
+                            x1
                         </h1>
 
                         <span className="flex flex-col items-center">
@@ -197,14 +192,14 @@ const Calculadora = () => {
                             </span>
                         </span>
 
-                        <span className="text-red-500">
+                        <h1 className="text-color-dark">
                             x1 = {((- valorB) + (valorDelta ** 0.5)) / (2 * valorA)}
-                        </span>
+                        </h1>
                     </div>
 
-                    <div className="text-color-light flex flex-col w-full items-center">
-                        <h1 className="ml-1 text-red-500 text-sm">
-                            x2:
+                    <div className="text-color-light flex flex-col items-center pb-2 md:pb-4 border-b-2 border-color-dark">
+                        <h1 className="rounded-md shadow-md text-white bg-color-dark px-2 py-1">
+                            x2
                         </h1>
 
                         <span className="flex flex-col items-center">
@@ -251,9 +246,9 @@ const Calculadora = () => {
                             </span>
                         </span>
 
-                        <span className="text-red-500">
+                        <h1 className="text-color-dark">
                             x2 = {((- valorB) - (valorDelta ** 0.5)) / (2 * valorA)}
-                        </span>
+                        </h1>
                     </div>
                 </div>
             </Modal>
