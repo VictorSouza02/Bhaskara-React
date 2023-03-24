@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom"
 import Modal from "../components/modal"
 import { useState } from "react"
 import Math from "../media/mathIcons.gif"
-import Error from "../media/error.png"
+import ErrorImage from "../media/error.png"
 
 const Calculadora = () => {
 
@@ -111,7 +110,7 @@ const Calculadora = () => {
 
 
                         <img
-                            src={Error}
+                            src={ErrorImage}
                             alt="Erro"
                             data-te-toggle="tooltip"
                             title="Por Xopolin"
