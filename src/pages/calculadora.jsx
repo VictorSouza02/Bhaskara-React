@@ -4,11 +4,13 @@ import { useState } from "react"
 
 const Calculadora = () => {
 
-    const [valorA, setValorA] = useState(Number)
-    const [valorB, setValorB] = useState(Number)
-    const [valorC, setValorC] = useState(Number)
+    const [valorA, setValorA] = useState(null)
+    const [valorB, setValorB] = useState(null)
+    const [valorC, setValorC] = useState(null)
 
     const valorDelta = valorB * valorB + -4 * valorA * valorC
+    const valorX1 = ((- valorB) + (valorDelta ** 0.5)) / (2 * valorA)
+    const valorX2 = ((- valorB) - (valorDelta ** 0.5)) / (2 * valorA)
 
     return (
         <section className="w-full min-h-[100vh] flex flex-col items-center justify-center">
@@ -96,161 +98,192 @@ const Calculadora = () => {
             </div>
 
             <Modal idRef="modalCalculadora">
-                <div
-                    className="
-                        flex flex-col lg:flex-row flex-wrap items-center w-full text-xl 
-                        md:text-2xl text-color-dark font-bold gap-2 md:gap-4
-                    "
-                >
-                    {/* <div
+                {isNaN(valorX1 && valorX2)
+                    ?
+
+                    <div
                         className="
-                            flex flex-col w-full items-center md:flex-row md:justify-around 
-                            gap-2 md:gap-4 pb-2 md:pb-4 border-b-2 border-color-dark
+                            flex flex-col items-center
                         "
                     >
-                        <h1 className="rounded-md shadow-md text-white bg-orange-500 px-2 py-1">
-                            Δ = {valorDelta}
-                        </h1>
 
-                        <h1 className="rounded-md shadow-md text-white bg-orange-500 px-2 py-1">
-                            Δ = {((- valorB) + (valorDelta ** 0.5)) / (2 * valorA)}
-                        </h1>
 
-                        <h1 className="rounded-md shadow-md text-white bg-orange-500 px-2 py-1">
-                            Δ = {((- valorB) - (valorDelta ** 0.5)) / (2 * valorA)}
-                        </h1>
-                    </div> */}
+                        <img
+                            src="./media/error.png"
+                            alt="Professor Teaching"
+                            data-te-toggle="tooltip"
+                            title="Por Xopolin"
+                        />
 
-                    <div className="text-color-light flex flex-col items-center pb-2 md:pb-4 border-b-2 border-color-dark">
-                        <h1 className="rounded-md shadow-md text-white bg-color-dark px-2 py-1">
-                            Delta
-                        </h1>
+                        <div className="font-bold text-xl md:text-2xl text-red-500 text-center">
+                            <h1>Ocorreu um erro</h1>
 
-                        <span>
-                            Δ = b&sup2; – 4.a.c
-                        </span>
+                            <p>
+                                favor conferir os valores inseridos
+                            </p>
+                        </div>
 
-                        <span>
-                            Δ = {valorB}&sup2; – 4.{valorA}.{valorC}
-                        </span>
-
-                        <span>
-                            Δ = {valorB * valorB} + {-4 * valorA * valorC}
-                        </span>
-
-                        <span>
-                            Δ = {valorDelta}
-                        </span>
                     </div>
 
-                    <div className="text-color-light flex flex-col items-center pb-2 md:pb-4 border-b-2 border-color-dark">
-                        <h1 className="rounded-md shadow-md mb-1 text-white bg-color-dark px-2 py-1">
-                            x1
-                        </h1>
 
-                        <span className="flex flex-col items-center">
-                            <span>
-                                x1 = – B + √Δ
-                            </span>
+                    :
 
-                            <span className="w-[90%] bg-color-light h-0.5"></span>
+                    <div
+                        className="
+                            flex flex-col md:flex-row md:items-start flex-wrap items-center w-full text-xl justify-center
+                            md:text-2xl text-color-dark font-bold gap-2
+                        "
+                    >
+                        <div
+                            className="
+                            flex gap-6 flex-wrap w-full items-center justify-center md:flex-row md:justify-around 
+                            pb-2 md:pb-4 border-b-2 border-color-dark
+                        "
+                        >
+                            <h1 className="rounded-md shadow-md text-white bg-orange-500 px-2 py-1">
+                                Δ = {valorDelta}
+                            </h1>
 
-                            <span>
-                                2.a
-                            </span>
-                        </span>
+                            <h1 className="rounded-md shadow-md text-white bg-orange-500 px-2 py-1">
+                                x1 = {((- valorB) + (valorDelta ** 0.5)) / (2 * valorA)}
+                            </h1>
 
-                        <span className="flex flex-col items-center">
-                            <span>
-                                x1 = –
-                                {valorB < 1
-                                    ? <>({valorB})</>
-                                    : valorB
-                                }
-                                + √{valorDelta}
-                            </span>
+                            <h1 className="rounded-md shadow-md text-white bg-orange-500 px-2 py-1">
+                                x2 = {((- valorB) - (valorDelta ** 0.5)) / (2 * valorA)}
+                            </h1>
+                        </div>
 
-                            <span className="w-[90%] bg-color-light h-0.5"></span>
-
-                            <span>
-                                2.{valorA < 1
-                                    ? <>({valorA})</>
-                                    : valorA
-                                }
-                            </span>
-                        </span>
-
-                        <span className="flex flex-col items-center">
-                            <span>
-                                x1 = {- valorB} + {valorDelta ** 0.5}
-                            </span>
-
-                            <span className="w-[90%] bg-color-light h-0.5"></span>
+                        <div className="text-color-dark rounded-md shadow-md bg-color-light p-4 flex flex-col items-center gap-2">
+                            <h1 className="rounded-md shadow-md text-white bg-color-dark px-2 py-1">
+                                Delta
+                            </h1>
 
                             <span>
-                                {2 * valorA}
+                                Δ = b&sup2; – 4.a.c
                             </span>
-                        </span>
 
-                        <h1 className="text-color-dark">
-                            x1 = {((- valorB) + (valorDelta ** 0.5)) / (2 * valorA)}
-                        </h1>
+                            <span>
+                                Δ = {valorB}&sup2; – 4.{valorA}.{valorC}
+                            </span>
+
+                            <span>
+                                Δ = {valorB * valorB} + {-4 * valorA * valorC}
+                            </span>
+
+                            <span className="text-orange-500 px-2 py-1 rounded-md bg-white">
+                                Δ = {valorDelta}
+                            </span>
+                        </div>
+
+                        <div className="text-color-dark rounded-md shadow-md bg-color-light p-4 flex flex-col items-center gap-2">
+                            <h1 className="rounded-md shadow-md mb-1 text-white bg-color-dark px-2 py-1">
+                                x1
+                            </h1>
+
+                            <span className="flex flex-col items-center">
+                                <span>
+                                    x1 = – B + √Δ
+                                </span>
+
+                                <span className="w-[90%] bg-color-dark h-0.5"></span>
+
+                                <span>
+                                    2.a
+                                </span>
+                            </span>
+
+                            <span className="flex flex-col items-center">
+                                <span>
+                                    x1 = –
+                                    {valorB < 1
+                                        ? <>({valorB})</>
+                                        : valorB
+                                    }
+                                    + √{valorDelta}
+                                </span>
+
+                                <span className="w-[90%] bg-color-dark h-0.5"></span>
+
+                                <span>
+                                    2.{valorA < 1
+                                        ? <>({valorA})</>
+                                        : valorA
+                                    }
+                                </span>
+                            </span>
+
+                            <span className="flex flex-col items-center">
+                                <span>
+                                    x1 = {- valorB} + {valorDelta ** 0.5}
+                                </span>
+
+                                <span className="w-[90%] bg-color-dark h-0.5"></span>
+
+                                <span>
+                                    {2 * valorA}
+                                </span>
+                            </span>
+
+                            <h1 className="text-orange-500 px-2 py-1 rounded-md bg-white">
+                                x1 = {((- valorB) + (valorDelta ** 0.5)) / (2 * valorA)}
+                            </h1>
+                        </div>
+
+                        <div className="flex flex-col items-center text-color-dark rounded-md shadow-md bg-color-light p-4 gap-2">
+                            <h1 className="rounded-md shadow-md text-white bg-color-dark px-2 py-1">
+                                x2
+                            </h1>
+
+                            <span className="flex flex-col items-center">
+                                <span>
+                                    x2 = – B - √Δ
+                                </span>
+
+                                <span className="w-[90%] bg-color-dark h-0.5"></span>
+
+                                <span>
+                                    2.a
+                                </span>
+                            </span>
+
+                            <span className="flex flex-col items-center">
+                                <span>
+                                    x2 = –
+                                    {valorB < 1
+                                        ? <>({valorB})</>
+                                        : valorB
+                                    }
+                                    - √{valorDelta}
+                                </span>
+
+                                <span className="w-[90%] bg-color-dark h-0.5"></span>
+
+                                <span>
+                                    2.{valorA < 1
+                                        ? <>({valorA})</>
+                                        : valorA
+                                    }
+                                </span>
+                            </span>
+
+                            <span className="flex flex-col items-center">
+                                <span>
+                                    x2 = {- valorB} - {valorDelta ** 0.5}
+                                </span>
+
+                                <span className="w-[90%] bg-color-dark h-0.5"></span>
+
+                                <span>
+                                    {2 * valorA}
+                                </span>
+                            </span>
+
+                            <h1 className="text-orange-500 px-2 py-1 rounded-md bg-white">
+                                x2 = {((- valorB) - (valorDelta ** 0.5)) / (2 * valorA)}
+                            </h1>
+                        </div>
                     </div>
-
-                    <div className="text-color-light flex flex-col items-center pb-2 md:pb-4 border-b-2 border-color-dark">
-                        <h1 className="rounded-md shadow-md text-white bg-color-dark px-2 py-1">
-                            x2
-                        </h1>
-
-                        <span className="flex flex-col items-center">
-                            <span>
-                                x2 = – B - √Δ
-                            </span>
-
-                            <span className="w-[90%] bg-color-light h-0.5"></span>
-
-                            <span>
-                                2.a
-                            </span>
-                        </span>
-
-                        <span className="flex flex-col items-center">
-                            <span>
-                                x2 = –
-                                {valorB < 1
-                                    ? <>({valorB})</>
-                                    : valorB
-                                }
-                                - √{valorDelta}
-                            </span>
-
-                            <span className="w-[90%] bg-color-light h-0.5"></span>
-
-                            <span>
-                                2.{valorA < 1
-                                    ? <>({valorA})</>
-                                    : valorA
-                                }
-                            </span>
-                        </span>
-
-                        <span className="flex flex-col items-center">
-                            <span>
-                                x2 = {- valorB} - {valorDelta ** 0.5}
-                            </span>
-
-                            <span className="w-[90%] bg-color-light h-0.5"></span>
-
-                            <span>
-                                {2 * valorA}
-                            </span>
-                        </span>
-
-                        <h1 className="text-color-dark">
-                            x2 = {((- valorB) - (valorDelta ** 0.5)) / (2 * valorA)}
-                        </h1>
-                    </div>
-                </div>
+                }
             </Modal>
         </section>
     )

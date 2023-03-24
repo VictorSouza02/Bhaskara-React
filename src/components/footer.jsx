@@ -121,6 +121,15 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
+                                    href="https://icons8.com/illustrations/author/kP9rc8JiBCcz"
+                                    target="_blank"
+                                    className="text-white hover:underline"
+                                >
+                                    Irene M. Ray
+                                </a>
+                            </li>
+                            <li>
+                                <a
                                     href="https://codepen.io/flik185/pen/WxwLdX"
                                     target="_blank"
                                     className="text-white hover:underline"

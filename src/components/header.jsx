@@ -107,9 +107,9 @@ const Header = () => {
                                 </div>
                             </li>
                             <li data-te-nav-item-ref className="flex gap-1 items-center">
-                                <a href="/bhaskara" data-te-nav-link-ref>
+                                <Link to='/bhaskara' data-te-nav-link-ref>
                                     Bhaskara
-                                </a>
+                                </Link>
 
                                 <div className="md:hidden">
                                     <svg
@@ -133,9 +133,9 @@ const Header = () => {
                                 </div>
                             </li>
                             <li data-te-nav-item-ref className="flex gap-1 items-center">
-                                <a href="/sobre" data-te-nav-link-ref>
+                                <Link to='/sobre' data-te-nav-link-ref>
                                     Sobre
-                                </a>
+                                </Link>
 
                                 <div className="md:hidden">
                                     <svg
