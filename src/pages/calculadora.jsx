@@ -1,7 +1,7 @@
 import Modal from "../components/modal"
 import { useState } from "react"
 import Math from "../media/mathIcons.gif"
-import ErrorImage from "../media/error.png"
+import ImageEr from "../media/error.png"
 
 const Calculadora = () => {
 
@@ -110,7 +110,7 @@ const Calculadora = () => {
 
 
                         <img
-                            src={ErrorImage}
+                            src={ImageEr}
                             alt="Erro"
                             data-te-toggle="tooltip"
                             title="Por Xopolin"
