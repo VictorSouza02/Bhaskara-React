@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import Logo from "../media/logo.gif"
 
 const Header = () => {
     return (
@@ -39,7 +40,7 @@ const Header = () => {
                     </div>
 
                     <div className="justify-self-start md:order-[-1] overflow-hidden w-[64px] aspect-square rounded-full">
-                        <img src="./media/calculator.gif" alt="Calculator" />
+                        <img src={Logo} alt="Calculator" />
                     </div>
 
                     <div

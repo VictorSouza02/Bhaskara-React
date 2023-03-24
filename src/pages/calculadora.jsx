@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import Modal from "../components/modal"
 import { useState } from "react"
+import Math from "../media/mathIcons.gif"
+import Error from "../media/error.png"
 
 const Calculadora = () => {
 
@@ -20,10 +22,10 @@ const Calculadora = () => {
                             md:justify-between gap-4 md:gap-8
                         "
             >
-                <div className="w-full max-w-[100px] md:max-w-[250px] bg-white fancy-shape p-1">
+                <div className="w-full max-w-[150px] md:max-w-[300px] bg-white fancy-shape p-4">
                     <img
-                        src="./media/calculadora.png"
-                        alt="calculator"
+                        src={Math}
+                        alt="Icones matemáticos"
                         data-te-toggle="tooltip"
                         title="Por Xopolin"
                         className="ml-2 md:ml-6"
@@ -109,8 +111,8 @@ const Calculadora = () => {
 
 
                         <img
-                            src="./media/error.png"
-                            alt="Professor Teaching"
+                            src={Error}
+                            alt="Erro"
                             data-te-toggle="tooltip"
                             title="Por Xopolin"
                         />

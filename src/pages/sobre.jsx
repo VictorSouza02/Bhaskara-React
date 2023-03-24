@@ -1,3 +1,5 @@
+import Construction from "../media/working.gif"
+
 const Sobre = () => {
     return (
         <section className="w-full min-h-[100vh] flex flex-col items-center justify-center">
@@ -10,8 +12,8 @@ const Sobre = () => {
 
 
                 <img
-                    src="./media/working.gif"
-                    alt="Working"
+                    src={Construction}
+                    alt="Página em construção"
                     data-te-toggle="tooltip"
                     title="Por Irene M. Ray"
                 />

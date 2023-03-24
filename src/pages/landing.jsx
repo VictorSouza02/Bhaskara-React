@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
-import Header from "../components/header"
+import Teaching from "../media/landingTeacher.png"
+import Study from "../media/study.png"
 
 const Landing = () => {
     return (
@@ -13,8 +14,8 @@ const Landing = () => {
                 >
                     <div className="w-full max-w-[300px] md:max-w-[475px]">
                         <img
-                            src="./media/landingTeacher.png"
-                            alt="Professor Teaching"
+                            src={Teaching}
+                            alt="Professor Ensinando"
                             data-te-toggle="tooltip"
                             title="Por LuciYamaji"
                         />
@@ -61,7 +62,7 @@ const Landing = () => {
                         <div className="flex flex-col items-center justify-center gap-2">
                             <div className="w-full max-w-[300px] md:max-w-[475px]">
                                 <img
-                                    src="./media/study.png"
+                                    src={Study}
                                     alt="Itens relacionados ao estudo"
                                     data-te-toggle="tooltip"
                                     title="Por Xopolin"
