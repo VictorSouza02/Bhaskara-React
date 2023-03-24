@@ -9,10 +9,6 @@ const Calculadora = () => {
     const [valorB, setValorB] = useState(null)
     const [valorC, setValorC] = useState(null)
 
-    const valorDelta = valorB * valorB + -4 * valorA * valorC
-    const valorX1 = ((- valorB) + (valorDelta ** 0.5)) / (2 * valorA)
-    const valorX2 = ((- valorB) - (valorDelta ** 0.5)) / (2 * valorA)
-
     return (
         <section className="w-full min-h-[100vh] flex flex-col items-center justify-center">
             <div
@@ -99,7 +95,9 @@ const Calculadora = () => {
             </div>
 
             <Modal idRef="modalCalculadora">
-                {isNaN(valorX1 && valorX2)
+                {isNaN(((- valorB) + ((valorB * valorB + -4 * valorA * valorC) ** 0.5)) / (2 * valorA)
+                    &&
+                    ((- valorB) + ((valorB * valorB + -4 * valorA * valorC) ** 0.5)) / (2 * valorA))
                     ?
 
                     <div
@@ -107,8 +105,6 @@ const Calculadora = () => {
                             flex flex-col items-center
                         "
                     >
-
-
                         <img
                             src={ImageEr}
                             alt="Erro"
@@ -142,15 +138,15 @@ const Calculadora = () => {
                         "
                         >
                             <h1 className="rounded-md shadow-md text-white bg-orange-500 px-2 py-1">
-                                Δ = {valorDelta}
+                                Δ = {valorB * valorB + -4 * valorA * valorC}
                             </h1>
 
                             <h1 className="rounded-md shadow-md text-white bg-orange-500 px-2 py-1">
-                                x1 = {((- valorB) + (valorDelta ** 0.5)) / (2 * valorA)}
+                                x1 = {((- valorB) + ((valorB * valorB + -4 * valorA * valorC) ** 0.5)) / (2 * valorA)}
                             </h1>
 
                             <h1 className="rounded-md shadow-md text-white bg-orange-500 px-2 py-1">
-                                x2 = {((- valorB) - (valorDelta ** 0.5)) / (2 * valorA)}
+                                x2 = {((- valorB) - ((valorB * valorB + -4 * valorA * valorC) ** 0.5)) / (2 * valorA)}
                             </h1>
                         </div>
 
@@ -172,7 +168,7 @@ const Calculadora = () => {
                             </span>
 
                             <span className="text-orange-500 px-2 py-1 rounded-md bg-white">
-                                Δ = {valorDelta}
+                                Δ = {valorB * valorB + -4 * valorA * valorC}
                             </span>
                         </div>
 
@@ -200,7 +196,7 @@ const Calculadora = () => {
                                         ? <>({valorB})</>
                                         : valorB
                                     }
-                                    + √{valorDelta}
+                                    + √{(valorB * valorB + -4 * valorA * valorC)}
                                 </span>
 
                                 <span className="w-[90%] bg-color-dark h-0.5"></span>
@@ -215,7 +211,7 @@ const Calculadora = () => {
 
                             <span className="flex flex-col items-center">
                                 <span>
-                                    x1 = {- valorB} + {valorDelta ** 0.5}
+                                    x1 = {- valorB} + {(valorB * valorB + -4 * valorA * valorC) ** 0.5}
                                 </span>
 
                                 <span className="w-[90%] bg-color-dark h-0.5"></span>
@@ -226,7 +222,7 @@ const Calculadora = () => {
                             </span>
 
                             <h1 className="text-orange-500 px-2 py-1 rounded-md bg-white">
-                                x1 = {((- valorB) + (valorDelta ** 0.5)) / (2 * valorA)}
+                                x1 = {((- valorB) + ((valorB * valorB + -4 * valorA * valorC) ** 0.5)) / (2 * valorA)}
                             </h1>
                         </div>
 
@@ -254,7 +250,7 @@ const Calculadora = () => {
                                         ? <>({valorB})</>
                                         : valorB
                                     }
-                                    - √{valorDelta}
+                                    - √{(valorB * valorB + -4 * valorA * valorC)}
                                 </span>
 
                                 <span className="w-[90%] bg-color-dark h-0.5"></span>
@@ -269,7 +265,7 @@ const Calculadora = () => {
 
                             <span className="flex flex-col items-center">
                                 <span>
-                                    x2 = {- valorB} - {valorDelta ** 0.5}
+                                    x2 = {- valorB} - {(valorB * valorB + -4 * valorA * valorC) ** 0.5}
                                 </span>
 
                                 <span className="w-[90%] bg-color-dark h-0.5"></span>
@@ -280,7 +276,7 @@ const Calculadora = () => {
                             </span>
 
                             <h1 className="text-orange-500 px-2 py-1 rounded-md bg-white">
-                                x2 = {((- valorB) - (valorDelta ** 0.5)) / (2 * valorA)}
+                                x2 = {((- valorB) - ((valorB * valorB + -4 * valorA * valorC) ** 0.5)) / (2 * valorA)}
                             </h1>
                         </div>
                     </div>
