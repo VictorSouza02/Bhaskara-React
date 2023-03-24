@@ -4,9 +4,11 @@ import { useState } from "react"
 
 const Calculadora = () => {
 
-    const [valorA, setValorA] = useState(NaN)
-    const [valorB, setValorB] = useState(NaN)
-    const [valorC, setValorC] = useState(NaN)
+    const [valorA, setValorA] = useState(Number)
+    const [valorB, setValorB] = useState(Number)
+    const [valorC, setValorC] = useState(Number)
+
+    const valorDelta = valorB * valorB + -4 * valorA * valorC
 
     return (
         <section className="w-full min-h-[100vh] flex flex-col items-center justify-center">
@@ -26,14 +28,14 @@ const Calculadora = () => {
                     />
                 </div>
 
-                <div class="w-full max-w-[325px]">
-                    <form class="bg-white shadow-md rounded p-4 flex flex-col gap-4 md:gap-6 items-center w-full">
+                <div className="w-full max-w-[325px]">
+                    <form className="bg-white shadow-md rounded p-4 flex flex-col gap-4 md:gap-6 items-center w-full">
                         <div >
-                            <label class="block text-color-dark text-sm font-bold mb-1" for="valorA">
+                            <label className="block text-color-dark text-sm font-bold mb-1" htmlFor="valorA">
                                 A
                             </label>
                             <input
-                                class="
+                                className="
                                     shadow appearance-none border rounded w-full py-2 px-3 text-color-dark text-center md:text-start 
                                     leading-tight focus:outline-none focus:shadow-outline text-sm md:text-base
                                 "
@@ -46,11 +48,11 @@ const Calculadora = () => {
                         </div>
 
                         <div>
-                            <label class="block text-color-dark text-sm font-bold mb-1" for="valorB">
+                            <label className="block text-color-dark text-sm font-bold mb-1" htmlFor="valorB">
                                 B
                             </label>
                             <input
-                                class="
+                                className="
                                     shadow appearance-none border rounded w-full py-2 px-3 text-color-dark text-center md:text-start 
                                     leading-tight focus:outline-none focus:shadow-outline text-sm md:text-base
                                 "
@@ -63,11 +65,11 @@ const Calculadora = () => {
                         </div>
 
                         <div>
-                            <label class="block text-color-dark text-sm font-bold mb-1" for="valorC">
+                            <label className="block text-color-dark text-sm font-bold mb-1" htmlFor="valorC">
                                 C
                             </label>
                             <input
-                                class="
+                                className="
                                     shadow appearance-none border rounded w-full py-2 px-3 text-color-dark text-center md:text-start 
                                     leading-tight focus:outline-none focus:shadow-outline text-sm md:text-base
                                 "
@@ -80,7 +82,7 @@ const Calculadora = () => {
                         </div>
 
                         <button
-                            class="
+                            className="
                                 bg-color-medium hover:bg-color-dark text-white font-bold py-2 px-4 
                                 rounded focus:outline-none focus:shadow-outline"
                             type="button"
@@ -94,21 +96,164 @@ const Calculadora = () => {
             </div>
 
             <Modal idRef="modalCalculadora">
-                <div className="flex flex-col items-center w-full">
+                <div className="flex flex-col items-center w-full text-xl md:text-2xl text-color-dark font-bold">
                     <div className="flex flex-col w-full items-center md:flex-row md:justify-around">
-                        <h1 className="text-xl md:text-2xl text-color-dark font-bold">
-                            x1 =
-                            <span className="ml-1 text-red-500 text-3xl">
-                                {/* {valorX1} */}
-                            </span>
+                        <div className="flex">
+                            <h1>
+                                Δ =
+                            </h1>
+                            <h1 className="ml-1 text-red-500 text-3xl">
+                                {valorDelta}
+                            </h1>
+                        </div>
+
+                        <div className="flex">
+                            <h1>
+                                x1 =
+                            </h1>
+                            <h1 className="ml-1 text-red-500 text-3xl">
+                                {((- valorB) + (valorDelta ** 0.5)) / (2 * valorA)}
+                            </h1>
+                        </div>
+
+                        <div className="flex">
+                            <h1>
+                                x2 =
+                            </h1>
+                            <h1 className="ml-1 text-red-500 text-3xl">
+                                {((- valorB) - (valorDelta ** 0.5)) / (2 * valorA)}
+                            </h1>
+                        </div>
+                    </div>
+
+                    <div className="text-color-light flex flex-col w-full items-center">
+                        <h1 className="ml-1 text-red-500 text-sm">
+                            Delta:
                         </h1>
 
-                        <h1 className="text-xl md:text-2xl text-color-dark font-bold">
-                            x2 =
-                            <span className="ml-1 text-red-500 text-3xl">
-                                {/* {valorX2} */}
-                            </span>
+                        <span>
+                            Δ = b&sup2; – 4.a.c
+                        </span>
+
+                        <span>
+                            Δ = {valorB}&sup2; – 4.{valorA}.{valorC}
+                        </span>
+
+                        <span>
+                            Δ = {valorB * valorB} + {-4 * valorA * valorC}
+                        </span>
+
+                        <span>
+                            Δ = {valorDelta}
+                        </span>
+                    </div>
+
+                    <div className="text-color-light flex flex-col w-full items-center bg-color-pink-500">
+                        <h1 className="ml-1 text-red-500 text-sm">
+                            x1:
                         </h1>
+
+                        <span className="flex flex-col items-center">
+                            <span>
+                                x1 = – B + √Δ
+                            </span>
+
+                            <span className="w-[90%] bg-color-light h-0.5"></span>
+
+                            <span>
+                                2.a
+                            </span>
+                        </span>
+
+                        <span className="flex flex-col items-center">
+                            <span>
+                                x1 = –
+                                {valorB < 1
+                                    ? <>({valorB})</>
+                                    : valorB
+                                }
+                                + √{valorDelta}
+                            </span>
+
+                            <span className="w-[90%] bg-color-light h-0.5"></span>
+
+                            <span>
+                                2.{valorA < 1
+                                    ? <>({valorA})</>
+                                    : valorA
+                                }
+                            </span>
+                        </span>
+
+                        <span className="flex flex-col items-center">
+                            <span>
+                                x1 = {- valorB} + {valorDelta ** 0.5}
+                            </span>
+
+                            <span className="w-[90%] bg-color-light h-0.5"></span>
+
+                            <span>
+                                {2 * valorA}
+                            </span>
+                        </span>
+
+                        <span className="text-red-500">
+                            x1 = {((- valorB) + (valorDelta ** 0.5)) / (2 * valorA)}
+                        </span>
+                    </div>
+
+                    <div className="text-color-light flex flex-col w-full items-center">
+                        <h1 className="ml-1 text-red-500 text-sm">
+                            x2:
+                        </h1>
+
+                        <span className="flex flex-col items-center">
+                            <span>
+                                x2 = – B - √Δ
+                            </span>
+
+                            <span className="w-[90%] bg-color-light h-0.5"></span>
+
+                            <span>
+                                2.a
+                            </span>
+                        </span>
+
+                        <span className="flex flex-col items-center">
+                            <span>
+                                x2 = –
+                                {valorB < 1
+                                    ? <>({valorB})</>
+                                    : valorB
+                                }
+                                - √{valorDelta}
+                            </span>
+
+                            <span className="w-[90%] bg-color-light h-0.5"></span>
+
+                            <span>
+                                2.{valorA < 1
+                                    ? <>({valorA})</>
+                                    : valorA
+                                }
+                            </span>
+                        </span>
+
+                        <span className="flex flex-col items-center">
+                            <span>
+                                x2 = {- valorB} - {valorDelta ** 0.5}
+                            </span>
+
+                            <span className="w-[90%] bg-color-light h-0.5"></span>
+
+                            <span>
+                                {2 * valorA}
+                            </span>
+                        </span>
+
+                        <span className="text-red-500">
+                            x2 = {((- valorB) - (valorDelta ** 0.5)) / (2 * valorA)}
+                        </span>
                     </div>
                 </div>
             </Modal>

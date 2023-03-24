@@ -3,14 +3,14 @@ function Modal({ children, idRef }) {
     return (
         <div
             data-te-modal-init
-            class="fixed top-0 left-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none bg-[rgba(0,0,0,0.7)]"
+            className="fixed top-0 left-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none bg-[rgba(0,0,0,0.7)]"
             id={`${idRef}`}
-            tabindex="-1"
+            tabIndex="-1"
             aria-modal="true"
             role="dialog">
             <div
                 data-te-modal-dialog-ref
-                class="
+                className="
                     pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto 
                     translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out 
                     min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] 
@@ -18,10 +18,10 @@ function Modal({ children, idRef }) {
                 "
             >
                 <div
-                    class="
+                    className="
                     pointer-events-auto relative flex w-[85%] md:w-[70%] max-w-[900px] mx-auto 
                     flex-col rounded-md border-none bg-white bg-clip-padding text-current 
-                    shadow-lg outline-none py-10 px-4 min-h-[100px]
+                    shadow-lg outline-none py-10 px-4 min-h-[100px] my-8 max-h-[80vh] md:max-h-min
                     "
                 >
                     <button
