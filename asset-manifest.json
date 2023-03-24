@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Bhaskara-React/static/css/main.a6c4678b.css",
+    "main.js": "/Bhaskara-React/static/js/main.29103e52.js",
+    "index.html": "/Bhaskara-React/index.html",
+    "main.a6c4678b.css.map": "/Bhaskara-React/static/css/main.a6c4678b.css.map",
+    "main.29103e52.js.map": "/Bhaskara-React/static/js/main.29103e52.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6c4678b.css",
+    "static/js/main.29103e52.js"
+  ]
+}
