@@ -1,13 +1,19 @@
 {
   "files": {
-    "main.css": "/Bhaskara-React/static/css/main.a6c4678b.css",
-    "main.js": "/Bhaskara-React/static/js/main.29103e52.js",
+    "main.css": "/Bhaskara-React/static/css/main.9c110134.css",
+    "main.js": "/Bhaskara-React/static/js/main.3b41043b.js",
+    "static/media/working.gif": "/Bhaskara-React/static/media/working.71cc39f62cc7d11aace8.gif",
+    "static/media/mathIcons.gif": "/Bhaskara-React/static/media/mathIcons.5bf5b66e777ca0e82eaf.gif",
+    "static/media/error.png": "/Bhaskara-React/static/media/error.57b185ae1653ef35258d.png",
+    "static/media/study.png": "/Bhaskara-React/static/media/study.9a640da76ec42822ee47.png",
+    "static/media/landingTeacher.png": "/Bhaskara-React/static/media/landingTeacher.9a014def5c0965c2c2a6.png",
+    "static/media/logo.gif": "/Bhaskara-React/static/media/logo.fb382b253b202cf64e4f.gif",
     "index.html": "/Bhaskara-React/index.html",
-    "main.a6c4678b.css.map": "/Bhaskara-React/static/css/main.a6c4678b.css.map",
-    "main.29103e52.js.map": "/Bhaskara-React/static/js/main.29103e52.js.map"
+    "main.9c110134.css.map": "/Bhaskara-React/static/css/main.9c110134.css.map",
+    "main.3b41043b.js.map": "/Bhaskara-React/static/js/main.3b41043b.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6c4678b.css",
-    "static/js/main.29103e52.js"
+    "static/css/main.9c110134.css",
+    "static/js/main.3b41043b.js"
   ]
 }
