@@ -110,7 +110,7 @@ const Calculadora = () => {
 
 
                         <img
-                            src=""
+                            src={ErrorImage}
                             alt="Erro"
                             data-te-toggle="tooltip"
                             title="Por Xopolin"
