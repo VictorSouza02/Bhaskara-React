@@ -1,13 +1,17 @@
 import Modal from "../components/modal"
 import { useState } from "react"
-import Math from "../media/mathIcons.gif"
-import ImageEr from "../media/error.png"
+import MathIcons from "../media/mathIcons.gif"
+import MathError from "../media/error.png"
 
 const Calculadora = () => {
 
     const [valorA, setValorA] = useState(null)
     const [valorB, setValorB] = useState(null)
     const [valorC, setValorC] = useState(null)
+
+    const valorDelta = valorB * valorB + -4 * valorA * valorC
+    const valorX1 = ((- valorB) + (valorDelta ** 0.5)) / (2 * valorA)
+    const valorX2 = ((- valorB) - (valorDelta ** 0.5)) / (2 * valorA)
 
     return (
         <section className="w-full min-h-[100vh] flex flex-col items-center justify-center">
@@ -19,7 +23,7 @@ const Calculadora = () => {
             >
                 <div className="w-full max-w-[150px] md:max-w-[300px] bg-white fancy-shape p-4">
                     <img
-                        src={Math}
+                        src={MathIcons}
                         alt="Icones matemáticos"
                         data-te-toggle="tooltip"
                         title="Por Xopolin"
@@ -95,7 +99,7 @@ const Calculadora = () => {
             </div>
 
             <Modal idRef="modalCalculadora">
-                {valorA === 0
+                {isNaN(valorX1 && valorX2)
                     ?
 
                     <div
@@ -103,9 +107,11 @@ const Calculadora = () => {
                             flex flex-col items-center
                         "
                     >
+
+
                         <img
-                            src={ImageEr}
-                            alt="Erro"
+                            src={MathError}
+                            alt="Icones matemáticos erro"
                             data-te-toggle="tooltip"
                             title="Por Xopolin"
                         />
@@ -136,15 +142,15 @@ const Calculadora = () => {
                         "
                         >
                             <h1 className="rounded-md shadow-md text-white bg-orange-500 px-2 py-1">
-                                Δ = {valorB * valorB + -4 * valorA * valorC}
+                                Δ = {valorDelta}
                             </h1>
 
                             <h1 className="rounded-md shadow-md text-white bg-orange-500 px-2 py-1">
-                                x1 = {((- valorB) + ((valorB * valorB + -4 * valorA * valorC) ** 0.5)) / (2 * valorA)}
+                                x1 = {((- valorB) + (valorDelta ** 0.5)) / (2 * valorA)}
                             </h1>
 
                             <h1 className="rounded-md shadow-md text-white bg-orange-500 px-2 py-1">
-                                x2 = {((- valorB) - ((valorB * valorB + -4 * valorA * valorC) ** 0.5)) / (2 * valorA)}
+                                x2 = {((- valorB) - (valorDelta ** 0.5)) / (2 * valorA)}
                             </h1>
                         </div>
 
@@ -166,7 +172,7 @@ const Calculadora = () => {
                             </span>
 
                             <span className="text-orange-500 px-2 py-1 rounded-md bg-white">
-                                Δ = {valorB * valorB + -4 * valorA * valorC}
+                                Δ = {valorDelta}
                             </span>
                         </div>
 
@@ -194,7 +200,7 @@ const Calculadora = () => {
                                         ? <>({valorB})</>
                                         : valorB
                                     }
-                                    + √{(valorB * valorB + -4 * valorA * valorC)}
+                                    + √{valorDelta}
                                 </span>
 
                                 <span className="w-[90%] bg-color-dark h-0.5"></span>
@@ -209,7 +215,7 @@ const Calculadora = () => {
 
                             <span className="flex flex-col items-center">
                                 <span>
-                                    x1 = {- valorB} + {(valorB * valorB + -4 * valorA * valorC) ** 0.5}
+                                    x1 = {- valorB} + {valorDelta ** 0.5}
                                 </span>
 
                                 <span className="w-[90%] bg-color-dark h-0.5"></span>
@@ -220,7 +226,7 @@ const Calculadora = () => {
                             </span>
 
                             <h1 className="text-orange-500 px-2 py-1 rounded-md bg-white">
-                                x1 = {((- valorB) + ((valorB * valorB + -4 * valorA * valorC) ** 0.5)) / (2 * valorA)}
+                                x1 = {((- valorB) + (valorDelta ** 0.5)) / (2 * valorA)}
                             </h1>
                         </div>
 
@@ -248,7 +254,7 @@ const Calculadora = () => {
                                         ? <>({valorB})</>
                                         : valorB
                                     }
-                                    - √{(valorB * valorB + -4 * valorA * valorC)}
+                                    - √{valorDelta}
                                 </span>
 
                                 <span className="w-[90%] bg-color-dark h-0.5"></span>
@@ -263,7 +269,7 @@ const Calculadora = () => {
 
                             <span className="flex flex-col items-center">
                                 <span>
-                                    x2 = {- valorB} - {(valorB * valorB + -4 * valorA * valorC) ** 0.5}
+                                    x2 = {- valorB} - {valorDelta ** 0.5}
                                 </span>
 
                                 <span className="w-[90%] bg-color-dark h-0.5"></span>
@@ -274,7 +280,7 @@ const Calculadora = () => {
                             </span>
 
                             <h1 className="text-orange-500 px-2 py-1 rounded-md bg-white">
-                                x2 = {((- valorB) - ((valorB * valorB + -4 * valorA * valorC) ** 0.5)) / (2 * valorA)}
+                                x2 = {((- valorB) - (valorDelta ** 0.5)) / (2 * valorA)}
                             </h1>
                         </div>
                     </div>
