@@ -95,9 +95,7 @@ const Calculadora = () => {
             </div>
 
             <Modal idRef="modalCalculadora">
-                {isNaN(((- valorB) + ((valorB * valorB + -4 * valorA * valorC) ** 0.5)) / (2 * valorA)
-                    &&
-                    ((- valorB) + ((valorB * valorB + -4 * valorA * valorC) ** 0.5)) / (2 * valorA))
+                {valorA === 0
                     ?
 
                     <div
