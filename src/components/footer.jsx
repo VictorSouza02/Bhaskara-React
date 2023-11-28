@@ -157,7 +157,7 @@ const Footer = () => {
                         <ul className="mb-0 list-none">
                             <li>
                                 <a
-                                    href="https://victorsouza02.github.io/Portfolio/#/pt"
+                                    href="https://www.victorsouza.dev/"
                                     target="_blank"
                                     className="text-white hover:underline"
                                 >
